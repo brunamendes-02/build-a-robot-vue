@@ -2,11 +2,13 @@
 
 ## Project setup
 ```
+nvm use 14
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
+nvm use 14
 yarn serve
 ```
 
