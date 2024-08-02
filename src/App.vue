@@ -4,7 +4,12 @@
       <ul>
         <li class="nav-item">
           <img class="logo" src="./components/assets/build-a-bot-logo.png">
+          Build-a-Bot
         </li>
+        <li>
+          User: {{ user.userName }}
+        </li>
+        <button @click="changeUserName()">Change</button>
       </ul>
     </nav>
   </header>
@@ -22,6 +27,19 @@ export default {
   name: 'App',
   components: {
     RobotBuilder,
+  },
+  data() {
+    return {
+      user: { userName: 'Sam' },
+    };
+  },
+  provide() {
+    return { user: this.user };
+  },
+  methods: {
+    changeUserName() {
+      this.user.userName = 'Samwise';
+    },
   },
 };
 </script>
