@@ -4,43 +4,19 @@
       <ul>
         <li class="nav-item">
           <img class="logo" src="./components/assets/build-a-bot-logo.png">
-          Build-a-Bot
+          <router-link class="nav-link" :to="{name: 'Home'}">Build-a-Bot</router-link>
         </li>
-        <li>
-          User: {{ user.userName }}
-        </li>
-        <button @click="changeUserName()">Change</button>
       </ul>
     </nav>
   </header>
   <main>
-    <RobotBuilder />
+    <router-view />
   </main>
 </template>
 
 <script>
-// import HomePage from './components/home/HomePage.vue';
-import RobotBuilder from './components/build/RobotBuilder.vue';
-// import Search from './components/search/Search.vue';
 
 export default {
-  name: 'App',
-  components: {
-    RobotBuilder,
-  },
-  data() {
-    return {
-      user: { userName: 'Sam' },
-    };
-  },
-  provide() {
-    return { user: this.user };
-  },
-  methods: {
-    changeUserName() {
-      this.user.userName = 'Samwise';
-    },
-  },
 };
 </script>
 
@@ -82,5 +58,10 @@ ul {
 .logo {
   vertical-align: middle;
   height: 30px;
+}
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 5px;
 }
 </style>
