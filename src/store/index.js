@@ -4,7 +4,7 @@ export default createStore({
   state: {
     cart: [],
   },
-  mutation: {
+  mutations: {
     addRobotToCart(state, robot) {
       state.cart.push(robot);
     },
