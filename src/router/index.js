@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from '../components/home/HomePage.vue';
-import RobotBuilder from '../components/build/RobotBuilder.vue';
-import PartInfo from '../components/parts/PartInfo.vue';
-import BrowseParts from '../components/parts/BrowseParts.vue';
-import RobotHeads from '../components/parts/RobotHeads.vue';
-import RobotTorsos from '../components/parts/RobotTorsos.vue';
-import RobotBases from '../components/parts/RobotBases.vue';
-import RobotArms from '../components/parts/RobotArms.vue';
-import SideBarStandard from '../components/sidebars/SideBarStandard.vue';
-import SideBarBuild from '../components/sidebars/SideBarBuild.vue';
+import HomePage from '../home/HomePage.vue';
+import RobotBuilder from '../build/RobotBuilder.vue';
+import PartInfo from '../parts/PartInfo.vue';
+import BrowseParts from '../parts/BrowseParts.vue';
+import RobotHeads from '../parts/RobotHeads.vue';
+import RobotTorsos from '../parts/RobotTorsos.vue';
+import RobotBases from '../parts/RobotBases.vue';
+import RobotArms from '../parts/RobotArms.vue';
+import SideBarStandard from '../sidebars/SideBarStandard.vue';
+import SideBarBuild from '../sidebars/SideBarBuild.vue';
+import ShoppingCart from '../cart/ShoppingCart.vue';
 
 export default createRouter({
   history: createWebHistory(),
@@ -64,5 +65,10 @@ export default createRouter({
       const iValidId = Number.isInteger(Number(to.params.id));
       next(iValidId);
     },
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: ShoppingCart,
   }],
 });
