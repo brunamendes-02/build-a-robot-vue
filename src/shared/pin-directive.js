@@ -1,8 +1,9 @@
 /* eslint-disable no-param-reassign */
 export default {
-  beforeMount(element) {
+  beforeMount(element, biding) {
+    Object.keys(biding.value).forEach((position) => {
+      element.style[position] = biding.value[position];
+    });
     element.style.position = 'absolute';
-    element.style.bottom = '5px';
-    element.style.right = '5px';
   },
 };
