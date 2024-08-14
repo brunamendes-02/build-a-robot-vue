@@ -11,6 +11,7 @@ yarn install
 nvm use 14
 yarn serve
 ```
+OBS.: To run the project, it is necessary to start the server, which is available at the following link: https://github.com/jmcooper/build-a-bot-server.
 
 ### Compiles and minifies for production
 ```
