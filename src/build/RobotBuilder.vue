@@ -20,12 +20,6 @@
     </div>
 
     <div class="top-row">
-      <!-- <div :class="[saleBorderClass, 'top', 'part']">
-        <div class="robot-name">
-          {{ selectedRobot.head.title }}
-          <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
-        </div>
-      </div> -->
       <PartSelector
         :parts="availableParts.heads"
         position="top"
